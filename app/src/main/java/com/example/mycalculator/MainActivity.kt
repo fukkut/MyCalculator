@@ -78,6 +78,15 @@ class MainActivity : AppCompatActivity() {
             secondNumber = ""
             operation = ""
         }
+
+        val btnClear = findViewById<Button>(R.id.btnClear)
+
+        btnClear.setOnClickListener {
+            firstNumber = ""
+            secondNumber = ""
+            operation = ""
+            tvResult.text = "0"
+        }
     }
 
     private fun addDigit(digit: String, tvResult: TextView) {
