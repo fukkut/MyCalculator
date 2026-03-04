@@ -26,4 +26,14 @@ class MainActivity : AppCompatActivity() {
 
         val tvResult = findViewById<TextView>(R.id.tvResult)
     }
+
+    private fun addDigit(digit: String, tvResult: TextView) {
+        if (operation.isEmpty()) {
+            firstNumber += digit
+            tvResult.text = firstNumber
+        } else {
+            secondNumber += digit
+            tvResult.text = secondNumber
+        }
+    }
 }
