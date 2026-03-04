@@ -2,4 +2,13 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="display_bg">#FF2C2C2C</color>
+    <color name="display_text">#FFFFFF</color>
+    <color name="btn_number">#FF424242</color>
+    <color name="btn_number_text">#FFFFFFFF</color>
+    <color name="btn_operator">#FFFF8F00</color>
+    <color name="btn_operator_text">#FFFFFFFF</color>
+    <color name="btn_clear">#FFD32F2F</color>
+    <color name="btn_equals">#FF388E3C</color>
+    <color name="bg_main">#FF212121</color>
 </resources>
