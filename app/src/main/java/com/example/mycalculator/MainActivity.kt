@@ -25,6 +25,38 @@ class MainActivity : AppCompatActivity() {
         }
 
         val tvResult = findViewById<TextView>(R.id.tvResult)
+
+        val btn0 = findViewById<Button>(R.id.btn0)
+        val btn1 = findViewById<Button>(R.id.btn1)
+        val btn2 = findViewById<Button>(R.id.btn2)
+        val btn3 = findViewById<Button>(R.id.btn3)
+        val btn4 = findViewById<Button>(R.id.btn4)
+        val btn5 = findViewById<Button>(R.id.btn5)
+        val btn6 = findViewById<Button>(R.id.btn6)
+        val btn7 = findViewById<Button>(R.id.btn7)
+        val btn8 = findViewById<Button>(R.id.btn8)
+        val btn9 = findViewById<Button>(R.id.btn9)
+
+        btn0.setOnClickListener { addDigit("0", tvResult) }
+        btn1.setOnClickListener { addDigit("1", tvResult) }
+        btn2.setOnClickListener { addDigit("2", tvResult) }
+        btn3.setOnClickListener { addDigit("3", tvResult) }
+        btn4.setOnClickListener { addDigit("4", tvResult) }
+        btn5.setOnClickListener { addDigit("5", tvResult) }
+        btn6.setOnClickListener { addDigit("6", tvResult) }
+        btn7.setOnClickListener { addDigit("7", tvResult) }
+        btn8.setOnClickListener { addDigit("8", tvResult) }
+        btn9.setOnClickListener { addDigit("9", tvResult) }
+
+        val btnPlus = findViewById<Button>(R.id.btnPlus)
+        val btnMinus = findViewById<Button>(R.id.btnMinus)
+        val btnMultiply = findViewById<Button>(R.id.btnMultiply)
+        val btnDivide = findViewById<Button>(R.id.btnDivide)
+
+        btnPlus.setOnClickListener { operation = "+" }
+        btnMinus.setOnClickListener { operation = "-" }
+        btnMultiply.setOnClickListener { operation = "*" }
+        btnDivide.setOnClickListener { operation = "/" }
     }
 
     private fun addDigit(digit: String, tvResult: TextView) {
