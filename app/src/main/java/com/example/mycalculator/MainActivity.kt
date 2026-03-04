@@ -57,6 +57,27 @@ class MainActivity : AppCompatActivity() {
         btnMinus.setOnClickListener { operation = "-" }
         btnMultiply.setOnClickListener { operation = "*" }
         btnDivide.setOnClickListener { operation = "/" }
+
+
+        val btnEquals = findViewById<Button>(R.id.btnEquals)
+
+        btnEquals.setOnClickListener {
+            val num1 = firstNumber.toIntOrNull() ?: 0
+            val num2 = secondNumber.toIntOrNull() ?: 0
+
+            val result = when (operation) {
+                "+" -> num1 + num2
+                "-" -> num1 - num2
+                "*" -> num1 * num2
+                "/" -> if (num2 != 0) num1 / num2 else 0
+                else -> 0
+            }
+
+            tvResult.text = result.toString()
+            firstNumber = result.toString()
+            secondNumber = ""
+            operation = ""
+        }
     }
 
     private fun addDigit(digit: String, tvResult: TextView) {
